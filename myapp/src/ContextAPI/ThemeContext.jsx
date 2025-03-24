@@ -1,9 +1,29 @@
-import React from 'react'
+import { createContext, useContext, useState, useEffect } from "react";
 
-const ThemeContext = () => {
+const ThemeContext = createContext();
+
+export const ThemeProvider = ({ children }) => {
+    const [theme, setTheme] = useState(() => {
+        return localStorage.getItem("Theme") || "Dark";
+    });
+
+    const handleThemeSwitcher = () => {
+        const newTheme = theme === "Light" ? "Dark" : "Light";
+        setTheme(newTheme);
+        localStorage.setItem("Theme", newTheme); 
+    };
+
+    useEffect(() => {
+        document.body.className = theme;
+    }, [theme]);
+
     return (
-        <div>ThemeContext</div>
-    )
-}
+        <ThemeContext.Provider value={{ handleThemeSwitcher, theme }}>
+            {children}
+        </ThemeContext.Provider>
+    );
+};
 
-export default ThemeContext
+export const useTheme = () => {
+    return useContext(ThemeContext);
+};
