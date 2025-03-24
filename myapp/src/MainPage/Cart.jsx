@@ -1,9 +1,13 @@
 import React from 'react'
+import CartValues from '../Carts&Orders/CartValues'
 
 const Cart = () => {
-    return (
-        <div>Cart</div>
-    )
+  
+  return (
+    <div>
+      <CartValues />
+    </div>
+  )
 }
 
-export default Cart
+export default Cart;
