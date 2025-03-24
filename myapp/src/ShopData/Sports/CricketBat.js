@@ -101,7 +101,7 @@ const CricketBats = [
   {
     id: 12,
     name: "DSC Intense Rage",
-    imageURL: "https://www.sportswing.in/wp-content/uploads/2019/02/DSC-Intense-Rage-English-Willow-Cricket-Bat-4-1.jpg",
+    imageURL: "https://img.tatacliq.com/images/i17//1348Wx2000H/MP000000021534237_1348Wx2000H_202405192221001.jpeg",
     price: 6000,
     weight: "1.14 kg",
     starRating: 3.9,
