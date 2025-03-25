@@ -47,6 +47,7 @@ import OnlinePayment from './PaymentComponents/OnlinePayment';
 import CashPayment from './PaymentComponents/CashPayment';
 import Address from './Carts&Orders/Address';
 import LaptopsSingle from './ComponentSinglePage/LaptopsSingle';
+import AirpodsSingle from './ComponentSinglePage/AirpodsSingle';
 
 const App = () => {
 
@@ -75,6 +76,7 @@ const App = () => {
               <Route path='tvs' element={<Tvs />} />
               <Route path="mobiles-view/:name" element={<MobileSingle />} />
               <Route path="laptops-view/:name" element={<LaptopsSingle />} />
+              <Route path="airpods-view/:name" element={<AirpodsSingle />} />
             </Route>
             <Route path='/home/menswear' element={<MensWear />}>
               <Route index element={<Shirts />} />
