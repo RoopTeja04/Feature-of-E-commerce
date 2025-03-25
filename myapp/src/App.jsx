@@ -46,6 +46,7 @@ import ScrollTop from './ScrollTop';
 import OnlinePayment from './PaymentComponents/OnlinePayment';
 import CashPayment from './PaymentComponents/CashPayment';
 import Address from './Carts&Orders/Address';
+import LaptopsSingle from './ComponentSinglePage/LaptopsSingle';
 
 const App = () => {
 
@@ -73,6 +74,7 @@ const App = () => {
               <Route path='airpods' element={<Airpods />} />    
               <Route path='tvs' element={<Tvs />} />
               <Route path="mobiles-view/:name" element={<MobileSingle />} />
+              <Route path="laptops-view/:name" element={<LaptopsSingle />} />
             </Route>
             <Route path='/home/menswear' element={<MensWear />}>
               <Route index element={<Shirts />} />
