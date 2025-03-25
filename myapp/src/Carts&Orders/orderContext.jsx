@@ -14,6 +14,7 @@ export const OrderProvider = ({ children }) => {
 
             return orderItems;
         })
+        
     }
 
     const RemoveFromOrder = (item) => {
@@ -21,6 +22,8 @@ export const OrderProvider = ({ children }) => {
             orderItems.filter((order) => order !== item)
         );
     }
+
+    console.log(orderItems)
 
     return (
         <orderContext.Provider value={{ orderItems, handleOrder, RemoveFromOrder }}>

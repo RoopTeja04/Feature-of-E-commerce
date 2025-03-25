@@ -48,6 +48,7 @@ import CashPayment from './PaymentComponents/CashPayment';
 import Address from './Carts&Orders/Address';
 import LaptopsSingle from './ComponentSinglePage/LaptopsSingle';
 import AirpodsSingle from './ComponentSinglePage/AirpodsSingle';
+import ThankYou from './Carts&Orders/ThankYou';
 
 const App = () => {
 
@@ -122,6 +123,7 @@ const App = () => {
             <Route path='/home/online-payment' element={<OnlinePayment />} />
             <Route path='/home/cash-payment' element={<CashPayment />} />
             <Route path='/home/address' element={<Address />} />
+            <Route path='/home/thank-you' element={<ThankYou />} />
           </Route>
         </Routes>
     </>

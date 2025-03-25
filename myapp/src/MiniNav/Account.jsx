@@ -9,12 +9,6 @@ const Account = () => {
     const CurrentUser = localStorage.getItem("CurrentUser");
     const { theme } = useTheme();
 
-    const [ password, setPassword ] = useState(false);
-
-    const handleShowPassword = () => {
-        
-    }
-
     return (
         <>
             <div className='flex flex-col items-center w-full mt-10 min-h-screen'>
@@ -50,17 +44,17 @@ const Account = () => {
                             }
                         </div>
                     </div>
-                    <div>
+                    <div className={`flex justify-center items-center flex-col border-2 ${theme === "Light" ? "border-white" : "border-gray-900"} rounded-xl w-1/2`}>
                         <h1>Order Items</h1>
-                        <h1>{account.itemsOrder && account.itemsOrder.length} Ordered</h1>
+                        <h1>{account.orderItems && account.orderItems.length} Ordered</h1>
                         <h1>0 Delivered</h1>
                         <div>
                             {
-                                account.itemsOrder && account.itemsOrder.length > 0 ?
-                                    account.itemsOrder.map((item, index) => (
+                                account.orderItems && account.orderItems.length > 0 ?
+                                    account.orderItems.map((item, index) => (
                                         <div key={index}>
-                                            <h1>{item.name}</h1>
-                                            <img src={item.imageURL} alt={item.name} />
+                                            <h1 className="">{item.name}</h1>
+                                            <img className='h-10' src={item.imageURL} alt={item.name} />
                                         </div>
                                     )) :
                                     <p>No Items Order</p>
