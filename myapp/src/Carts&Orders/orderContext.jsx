@@ -4,29 +4,29 @@ const orderContext = createContext();
 
 export const OrderProvider = ({ children }) => {
 
+    const [BookedItems, setBookedItems] = useState([]);
+
     const [orderItems, setOrderItems] = useState([]);
 
     const handleOrder = (item) => {
         setOrderItems((orderItems) => {
-            if (!orderItems.find((prev_item) => prev_item.id === item.id)) {
-                return [item]
-            }
-
-            return orderItems;
+            setBookedItems([...BookedItems, item]);
+            return [item];
         })
-        
+
     }
 
     const RemoveFromOrder = (item) => {
         setOrderItems(
             orderItems.filter((order) => order !== item)
         );
+        setBookedItems(
+            BookedItems.filter((itemOrder) => itemOrder !== item)
+        );
     }
 
-    console.log(orderItems)
-
     return (
-        <orderContext.Provider value={{ orderItems, handleOrder, RemoveFromOrder }}>
+        <orderContext.Provider value={{ BookedItems, orderItems, handleOrder, RemoveFromOrder }}>
             {
                 children
             }

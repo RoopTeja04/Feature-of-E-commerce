@@ -15,7 +15,7 @@ export const AccountProvider = ({ children }) => {
     };
 
     const { cartItems } = useCart();
-    const { orderItems } = useOrder();
+    const { BookedItems } = useOrder();
     
     const [account, setAccount] = useState(() => {
         const savedAccount = localStorage.getItem("UserAddress");
@@ -33,10 +33,10 @@ export const AccountProvider = ({ children }) => {
                 password: currentPassword,
                 confirmPassword: currentPassword,
                 cartItems: cartItems,
-                orderItems: orderItems,
+                BookedItems: BookedItems,
             }));
         }
-    }, [cartItems, orderItems]);
+    }, [cartItems, BookedItems]);
 
     return (
         <AccountContext.Provider value={{ account, setAccount }}>

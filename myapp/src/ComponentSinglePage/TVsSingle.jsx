@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import { useNavigate, useParams } from 'react-router-dom';
-import MobilesData from '../ShopData/Electronics/Mobile';
+import TvsData from '../ShopData/Electronics/Tvs';
 import { IoStar } from "react-icons/io5";
 import { FaBackspace } from "react-icons/fa";
 import { useTheme } from '../ContextAPI/ThemeContext';
@@ -17,7 +17,7 @@ const MobileSingle = () => {
 
     const [paymentMethod, setPaymentMethod] = useState('');
 
-    const DataItems = MobilesData.find((item) => item.name === name);
+    const DataItems = TvsData.find((item) => item.name === name);
 
     const handleBuyNow = () => {
         handleOrder(DataItems);
@@ -42,7 +42,7 @@ const MobileSingle = () => {
             </button>
             <div className='mt-24 flex flex-row items-center'>
                 <div className='ml-56 w-1/3'>
-                    <img className='rounded-2xl h-9/10' src={DataItems.imageURL} alt='' />
+                    <img className='h-1/2' src={DataItems.imageURL} alt='' />
                 </div>
                 <div className='mt-8 ml-36 w-full'>
                     <p className='text-4xl pb-6 font-semibold tracking-wide capitalize'>

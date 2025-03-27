@@ -46,12 +46,12 @@ const Account = () => {
                     </div>
                     <div className={`flex justify-center items-center flex-col border-2 ${theme === "Light" ? "border-white" : "border-gray-900"} rounded-xl w-1/2`}>
                         <h1>Order Items</h1>
-                        <h1>{account.orderItems && account.orderItems.length} Ordered</h1>
+                        <h1>{account.BookedItems && account.BookedItems.length} Ordered</h1>
                         <h1>0 Delivered</h1>
                         <div>
                             {
-                                account.orderItems && account.orderItems.length > 0 ?
-                                    account.orderItems.map((item, index) => (
+                                account.BookedItems && account.BookedItems.length > 0 ?
+                                    account.BookedItems.map((item, index) => (
                                         <div key={index}>
                                             <h1 className="">{item.name}</h1>
                                             <img className='h-10' src={item.imageURL} alt={item.name} />

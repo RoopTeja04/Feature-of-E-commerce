@@ -49,6 +49,7 @@ import Address from './Carts&Orders/Address';
 import LaptopsSingle from './ComponentSinglePage/LaptopsSingle';
 import AirpodsSingle from './ComponentSinglePage/AirpodsSingle';
 import ThankYou from './Carts&Orders/ThankYou';
+import TVsSingle from './ComponentSinglePage/TVsSingle';
 
 const App = () => {
 
@@ -78,6 +79,7 @@ const App = () => {
               <Route path="mobiles-view/:name" element={<MobileSingle />} />
               <Route path="laptops-view/:name" element={<LaptopsSingle />} />
               <Route path="airpods-view/:name" element={<AirpodsSingle />} />
+              <Route path="tvs-view/:name" element={<TVsSingle />} />
             </Route>
             <Route path='/home/menswear' element={<MensWear />}>
               <Route index element={<Shirts />} />
