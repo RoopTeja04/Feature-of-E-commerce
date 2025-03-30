@@ -151,7 +151,7 @@ const Laptops = () => {
                                         <img className="h-36 rounded-lg" src={item.imageURL} alt={item.name} />
                                         <div className={`flex flex-col items-center mt-4 ${theme === "Light" ? "border-gray-100" : "border-gray-900"} border-t-2 outline-offset-8 w-full`}>
                                             <p className="mt-2 font-semibold text-lg tracking-wide">{item.name}</p>
-                                            <span className="mt-1 text-lg tracking-wider">₹ {item.price.toLocaleString("hi-IN")} /-</span>
+                                            <span className="mt-1 text-lg tracking-wider">{item.price > 0 ? `₹ ${item.price.toLocaleString("hi-IN")}/-` : (<p className='text-red-500 font-semibold tracking-widest'>Out of Stock</p>)}</span>
                                         </div>
                                     </Link>
                                     <div className="flex flex-col space-y-3 mt-4">

@@ -50,6 +50,8 @@ import LaptopsSingle from './ComponentSinglePage/LaptopsSingle';
 import AirpodsSingle from './ComponentSinglePage/AirpodsSingle';
 import ThankYou from './Carts&Orders/ThankYou';
 import TVsSingle from './ComponentSinglePage/TVsSingle';
+import ShirtsSingle from './ComponentSinglePage/ShirtsSingle';
+import PantsSingle from './ComponentSinglePage/PantsSingle';
 
 const App = () => {
 
@@ -70,7 +72,7 @@ const App = () => {
           <Route path='/home/search' element={<Search />} />
           <Route path='/home/cart' element={<Cart />} />
           <Route path='/home/order' element={<Order />} />
-          <Route path='/home/electronics' element={<Electronics />}>
+            <Route path='/home/electronics' element={<Electronics />}>
               <Route index element={<Mobiles />} />
               <Route path='mobiles' element={<Mobiles />} />
               <Route path='laptops' element={<Laptops />} />
@@ -86,6 +88,8 @@ const App = () => {
               <Route path='shirts' element={<Shirts />} />
               <Route path='pants' element={<Pants />} />
               <Route path='shoes' element={<Shoes />} />
+              <Route path='shirts-view/:name' element={<ShirtsSingle />} />
+              <Route path='pants-view/:name' element={<PantsSingle />} />
             </Route>
             <Route path='/home/ladieswear' element={<LadiesWear />} >
               <Route index element={<Sarees />} />

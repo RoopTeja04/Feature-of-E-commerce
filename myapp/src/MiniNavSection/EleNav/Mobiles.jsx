@@ -260,7 +260,7 @@ const Mobiles = () => {
                   <img className="h-56 rounded-lg" src={item.imageURL} alt={item.name} />
                   <div className={`${theme === "Light" ? "border-white" : "border-gray-900"} flex flex-col items-center mt-4 border-t-2 outline-offset-8 w-full`}>
                     <p className="mt-2 font-semibold text-lg tracking-wide">{item.name}</p>
-                    <span className="mt-1 text-lg tracking-wider">{item.price > 0 ? `₹ ${item.price.toLocaleString("hi-IN")}/-` : "Out Of Stock"}</span>
+                    <span className="mt-1 text-lg tracking-wider">{item.price > 0 ? `₹ ${item.price.toLocaleString("hi-IN")}/-` : (<p className='text-red-500 font-semibold tracking-widest'>Out of Stock</p>)}</span>
                   </div>
                 </Link>
                 <div className="flex flex-col space-y-3 mt-4">
