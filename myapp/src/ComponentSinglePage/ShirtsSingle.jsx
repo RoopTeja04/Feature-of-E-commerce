@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import { useNavigate, useParams } from 'react-router-dom';
-import ShirtsData from '../ShopData/MensWear/shirts';
+import ShirtsData from '../ShopData/MensWear/Shirts';
 import { IoStar } from "react-icons/io5";
 import { FaBackspace } from "react-icons/fa";
 import { useTheme } from '../ContextAPI/ThemeContext';

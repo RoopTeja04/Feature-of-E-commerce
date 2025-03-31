@@ -36,7 +36,7 @@ const PantsSingle = () => {
         <div className='min-h-screen pb-20'>
             <button
                 className={`relative top-5 left-6 text-2xl border-2 rounded-full p-2 cursor-pointer ${theme === "Light" ? "border-white" : "border-gray-800"}`}
-                onClick={() => navigate("/home/electronics/mobiles")}
+                onClick={() => navigate("/home/menswear/pants")}
             >
                 <FaBackspace />
             </button>

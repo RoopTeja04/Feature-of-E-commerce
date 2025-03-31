@@ -1,13 +1,13 @@
 import React, { useState } from 'react'
 import { useNavigate, useParams } from 'react-router-dom';
-import LaptopsData from '../ShopData/Electronics/Laptop';
+import SareesData from '../ShopData/LadiesWear/Sarees';
 import { IoStar } from "react-icons/io5";
 import { FaBackspace } from "react-icons/fa";
 import { useTheme } from '../ContextAPI/ThemeContext';
 import { useCart } from '../Carts&Orders/cartContext';
 import { useOrder } from '../Carts&Orders/orderContext';
 
-const LaptopsSingle = () => {
+const SareeSingle = () => {
 
     const { name } = useParams();
     const { theme } = useTheme();
@@ -17,7 +17,7 @@ const LaptopsSingle = () => {
 
     const [paymentMethod, setPaymentMethod] = useState('');
 
-    const DataItems = LaptopsData.find((item) => item.name === name);
+    const DataItems = SareesData.find((item) => item.name === name);
 
     const handleBuyNow = () => {
         handleOrder(DataItems);
@@ -52,8 +52,8 @@ const LaptopsSingle = () => {
                         {DataItems.price > 0 ? <p className='text-xl font-base tracking-wide'>{`₹ ${DataItems.price.toLocaleString("hi-IN")} /-`}</p> : <p className='text-red-600 text-2xl font-semibold tracking-wide'> Out of Cart</p>}
                         <p className='flex flex-row bg-green-600 items-center p-1 rounded-md space-x-1 cursor-pointer'><IoStar /> <p className='font-semibold pr-0.5'>{DataItems.rating}</p></p>
                     </div>
-                    <p className='tracking-wide font-base text-base pb-2'>RAM & Storage: {DataItems.Ram} & {DataItems.storage}</p>
-                    <p className='tracking-wide font-base text-base pb-2'>Processor: {DataItems.processor}</p>
+                    <p className='tracking-wide font-base text-base pb-2'>RAM & Storage: {DataItems.RAM} & {DataItems.Storage}</p>
+                    <p className='tracking-wide font-base text-base pb-2'>Camera: {DataItems.Camera}</p>
                     <p className='tracking-wide font-base text-base pb-2'>Battery: {DataItems.Battery}</p>
                     <div className='flex flex-col mt-10 space-x-4'>
                         <div className={`flex flex-col w-3/5 border-2 rounded-xl p-6 ${theme === "Light" ? "border-white" : "border-gray-800"} space-y-4`}>
@@ -93,4 +93,4 @@ const LaptopsSingle = () => {
     )
 }
 
-export default LaptopsSingle
+export default SareeSingle

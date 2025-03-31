@@ -52,6 +52,9 @@ import ThankYou from './Carts&Orders/ThankYou';
 import TVsSingle from './ComponentSinglePage/TVsSingle';
 import ShirtsSingle from './ComponentSinglePage/ShirtsSingle';
 import PantsSingle from './ComponentSinglePage/PantsSingle';
+import ShoesSingle from './ComponentSinglePage/ShoesSingle';
+import SareeSingle from './ComponentSinglePage/SareeSingle';
+import KurthaSingle from './ComponentSinglePage/KurthaSingle';
 
 const App = () => {
 
@@ -90,12 +93,15 @@ const App = () => {
               <Route path='shoes' element={<Shoes />} />
               <Route path='shirts-view/:name' element={<ShirtsSingle />} />
               <Route path='pants-view/:name' element={<PantsSingle />} />
+              <Route path='shoes-view/:name' element={<ShoesSingle />} />
             </Route>
             <Route path='/home/ladieswear' element={<LadiesWear />} >
               <Route index element={<Sarees />} />
               <Route path='sarees' element={<Sarees />} />
               <Route path='kurthas' element={<Kurtha />} />
               <Route path='slippers' element={<Slippers />} />
+              <Route path='sarees-view/:name' element={<SareeSingle />} />
+              <Route path='kurthas-view/:name' element={<KurthaSingle />} />
             </Route>
             <Route path='/home/homeappliances' element={<HomeAppliances />}>
               <Route index element={<AirConditioners />} />
